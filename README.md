@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Dynamic Table
 
-## Getting Started
+Dynamic Table adalah aplikasi web yang dibangun menggunakan Next.js, TypeScript, dan Tailwind CSS. Aplikasi ini menampilkan daftar universitas dari API eksternal, dengan fitur pencarian, pemfilteran berdasarkan negara, pengurutan, dan pagination yang responsif.
 
-First, run the development server:
+## Fitur
+
+- **Pencarian**: Mencari universitas berdasarkan nama atau negara.
+- **Filter**: Memfilter daftar universitas berdasarkan negara melalui dropdown.
+- **Pengurutan**: Mengurutkan daftar universitas berdasarkan nama atau negara.
+- **Pagination**: Menampilkan data dengan pagination yang responsif, hanya menampilkan beberapa nomor halaman di sekitar halaman aktif.
+- **Halaman Login**: Halaman login sederhana untuk autentikasi pengguna.
+
+## Prerequisites
+
+Sebelum memulai, pastikan Anda telah menginstal:
+
+- [Node.js](https://nodejs.org/) (versi 14.x atau lebih baru)
+- [npm](https://www.npmjs.com/) (biasanya sudah termasuk dalam instalasi Node.js)
+
+## Instalasi
+
+1. Clone repositori ini ke komputer Anda:
+
+   ```bash
+   git clone https://github.com/username/repo-name.git
+   cd repo-name
+   ```
+
+2. Instal dependensi yang diperlukan:
+
+   ```bash
+   npm install
+   ```
+
+## Menjalankan Aplikasi
+
+Untuk menjalankan aplikasi dalam mode pengembangan, gunakan perintah berikut:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Aplikasi akan berjalan di [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Struktur Proyek
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+project-folder/
+├── components/
+│   ├── DynamicTable.tsx  # Komponen utama untuk menampilkan tabel dinamis
+│   ├── Filter.tsx        # Komponen untuk filter berdasarkan negara
+│   ├── Pagination.tsx     # Komponen untuk pagination
+│   ├── Search.tsx         # Komponen untuk pencarian
+│   └── Sort.tsx           # Komponen untuk pengurutan
+└── login/
+│   └── page.tsx      # Halaman login
+├── page.tsx          # Halaman utama
+└── globals.css        # Style global
+```
 
-## Learn More
+## Cara Menggunakan
 
-To learn more about Next.js, take a look at the following resources:
+1. **Mencari Universitas**: Gunakan kolom pencarian untuk mencari universitas berdasarkan nama atau negara.
+2. **Memfilter Universitas**: Pilih negara dari dropdown filter untuk menampilkan universitas yang hanya berada di negara tersebut.
+3. **Mengurutkan Universitas**: Klik pada kolom judul tabel untuk mengurutkan berdasarkan nama atau negara.
+4. **Pagination**: Gunakan pagination di bagian bawah tabel untuk navigasi ke halaman berikutnya atau sebelumnya.
+5. **Halaman Login**: Akses halaman login di [http://localhost:3000/login](http://localhost:3000/login).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Teknologi yang Digunakan
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Next.js**: Framework React untuk pengembangan aplikasi web.
+- **TypeScript**: Superset dari JavaScript yang menambahkan tipe statis.
+- **Tailwind CSS**: Framework CSS untuk desain yang responsif dan dapat disesuaikan.
 
-## Deploy on Vercel
+## Kontribusi
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Jika Anda ingin berkontribusi pada proyek ini, silakan lakukan fork repositori dan buat pull request.
